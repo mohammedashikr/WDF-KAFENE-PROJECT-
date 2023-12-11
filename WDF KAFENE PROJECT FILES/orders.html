@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Order page</title>
+    <style>
+        *{
+            font-family: 'Poppins', sans-serif;
+            margin: 0%;
+            background-color: #F6F7FB;
+        }
+        .upper{
+            /* border:2px solid red; */
+            width: 100%;
+            height: 60px;
+            background-color: #ffff;
+            box-shadow: 0 2px 4px #ccc;
+        }
+        nav{
+            /* border:2px solid blue; */
+            width: 50%;
+            /* padding: 10px; */
+            margin-left: 40px;
+            /* height: 50px; */
+            display: flex;
+
+        }
+        #logo{
+            /* border: 2px solid red; */
+            width: 20%;
+            display: flex;
+            align-items: center;
+        }
+        img{
+            /* border: 2px solid red; */
+            width:16%;
+            height: 30px;
+        }
+        #kaf {
+            /* border: 2px solid red; */
+            width: 13%;
+            font-size: 24px;
+            font-weight: 500;
+            color: rgba(0,0,0,.8);
+            margin: 7px;
+        }
+
+        #lists{
+            /* border: 2px solid red; */
+            width: 30%;
+            
+            
+        }
+        li{
+            list-style-type: none;
+            font-size: 14px;
+            font-weight: 500;
+            color: rgba(0,0,0,.8);
+            
+        }
+        #navlist{
+            display: flex;
+            justify-content: space-around;
+            margin-top: 17px;
+            padding: 0%;
+
+        }
+        #hover{
+            
+            text-decoration: none;
+         
+        } 
+        #logout{
+            /* border: 2px solid red; */
+            display: flex;
+            justify-content: right;
+            width: 20%;
+            color: rgba(0,0,0,.8);
+            margin-left: 75%;
+            font-size: 14px;
+            font-weight: 500;
+            margin-top: -30px;
+            text-decoration: none;
+        }
+        #ul{
+            /* border: 2px solid red; */
+            width: 100%;
+            display: flex;
+            margin-left:100px;
+            margin-top: -245px;
+           
+        }
+        #head{
+            font-size: 14px;
+            font-weight: 700;
+            display:inline;
+            width: 100%;
+            margin-left: 190px;
+            color: black;
+            /* border: 2px solid red; */
+            
+        }
+        th{
+            padding-left: 140px;
+        }
+       
+        #black{
+            /* border: 2px solid red; */
+            width: 10%;
+            padding-left: 40px;
+            margin-left: 60px;
+            margin-top: 50px;
+        }
+        h4{
+            padding-top: 20px;
+        }
+        #Count label{
+            /* border: 2px solid red; */
+            display: block;
+            width: 10%;
+            padding-left: 40px;
+            margin-left: 60px;
+            padding-top: 20px;
+        }
+        #ptag{
+            margin-left: 60px;
+            padding-left: 40px;
+            margin-top: 20px;
+        }
+        th{
+            padding-left: 165px;
+        }
+        td{
+            font-size: 14px;
+            font-family: 500;
+
+        }
+        #ordersdata{
+            /* border: 2px solid red; */
+            margin-left: -100%;
+            margin-top: 50px;
+            padding: 20px;
+        }
+        #ordersdata td{
+            /* border: 2px solid red; */
+            padding: 20px;
+            padding-left: 90px;
+            background-color:#FFFFFF;
+        }
+        table {
+        width: 100%;
+        border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="upper">
+        <nav>
+            <div id="logo">
+                <img src="https://edu-web-fundamentals.web.app/static/media/logo.58169365.png" alt="">
+                <p id="kaf">Kafene</p>
+            </div>
+
+        <div id="lists">
+            <ul id="navlist">
+                <a id="hover" href="http://127.0.0.1:5500/orders.html"><li>Orders</li></a>
+                <a id="hover" href="http://127.0.0.1:5500/product.html"><li>Products</li></a>
+                <a id="hover" href="http://127.0.0.1:5500/user.html"><li>Users</li></a>
+            </ul>
+        </div>
+        </nav>
+        <a href="http://127.0.0.1:5500/index.html"id="logout">Logout</a>
+    </div>
+
+    <div id="black">
+        <h1>Orders</h1>
+        <h4>Filters</h4>
+    </div>
+    <p id="ptag">Count:</p>
+    <div id="Count">
+        <label><input type="checkbox"  id="New" checked> New</label>
+        <label><input type="checkbox"  id="Packed" checked> Packed</label>
+        <label><input type="checkbox" id="InTransit" checked> InTransit</label>
+        <label><input type="checkbox"  id="Delivered" checked> Delivered</label>
+    </div>
+    
+
+    <table id="ul">
+        <thead id="head">
+          <tr>
+            <th>ID</th>
+            <th>Customer</th>
+            <th>Date</th>
+            <th>Amount</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+    <tbody id="ordersdata"></tbody>
+    </table>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="orders.js"></script>
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>User page</title>
+    <style>
+         *{
+            font-family: 'Poppins', sans-serif;
+            margin: 0%;
+            background-color: #F6F7FB;
+        }
+        .upper{
+            /* border:2px solid red; */
+            width: 100%;
+            height: 60px;
+            background-color: #ffff;
+            box-shadow: 0 2px 4px #ccc;
+        }
+        nav{
+            /* border:2px solid blue; */
+            width: 50%;
+            /* padding: 10px; */
+            margin-left: 40px;
+            /* height: 50px; */
+            display: flex;
+
+        }
+        #logo{
+            /* border: 2px solid red; */
+            width: 20%;
+            display: flex;
+            align-items: center;
+        }
+        img{
+            /* border: 2px solid red; */
+            width:16%;
+            height: 30px;
+        }
+        #kaf {
+            /* border: 2px solid red; */
+            width: 13%;
+            font-size: 24px;
+            font-weight: 500;
+            color: rgba(0,0,0,.8);
+            margin: 7px;
+        }
+
+        #lists{
+            /* border: 2px solid red; */
+            width: 30%;
+            
+            
+        }
+        li{
+            list-style-type: none;
+            font-size: 14px;
+            font-weight: 500;
+            color: rgba(0,0,0,.8);
+            
+        }
+        #navlist{
+            display: flex;
+            justify-content: space-around;
+            margin-top: 17px;
+            padding: 0%;
+
+        }
+        #hover{
+            
+            text-decoration: none;
+         
+        } 
+        #logout{
+            /* border: 2px solid red; */
+            display: flex;
+            justify-content: right;
+            width: 20%;
+            color: rgba(0,0,0,.8);
+            margin-left: 75%;
+            font-size: 14px;
+            font-weight: 500;
+            margin-top: -30px;
+            text-decoration: none;
+        }
+        #black{
+            /* border: 2px solid red; */
+            width: 10%;
+            padding-left: 40px;
+            margin-left: 60px;
+            margin-top: 30px;
+        }
+        #searchbox{
+            /* border: 2px solid red; */
+            width: 50%;
+            margin-left: 100px;
+            margin-top: 20px;
+            /* height: 50px; */
+        }
+        #search{
+            /* border: 2px solid red; */
+            width: 70%;
+            height: 50px;
+            outline: none;
+            border: 0px;
+            padding-left: 20px;
+            border-bottom: 2px solid #8C8C8C;
+            background-color: #ffff;
+            font-size: 15px;
+            font-weight: 400;
+        }
+        #reset{
+            border: none;
+            width: 15%;
+            height: 50px;
+            background-color: #20B883;
+            color: #ffff;
+            border-radius: 36px;
+            margin-left: 20px;
+            cursor: pointer;
+        }
+        #ul{
+            /* border: 2px solid red; */
+            width: 100%;
+            display: flex;
+            
+           
+        }
+        #head{
+            font-size: 14px;
+            font-weight: 700;
+            display:inline;
+            margin-left: 70px;
+            margin-top: 30px;
+            width: 100%;
+            color: black;
+            /* border: 2px solid red; */
+            
+        }
+        th{
+            padding-left: 130px;
+        }
+        #user{
+            /* border: 2px solid red; */
+            padding: 20px;
+            margin-left: 120px;
+            margin-top: 30px;
+            width:80% ;
+
+        }
+        #user td{
+            /* border: 2px solid red; */
+            padding-left:80px;
+            padding-bottom: 20px;
+            height: 40px;
+            background-color:#FFFFFF;
+
+        }
+        td img{
+            border: 2px solid #ffff;
+            width: 90%;
+            height: 90%;
+        }
+        td{
+            font-size: 14px;
+            font-family: 500;
+
+        }
+        table {
+        width: 100%;
+        border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+     <div class="upper">
+        <nav>
+            <div id="logo">
+                <img src="https://edu-web-fundamentals.web.app/static/media/logo.58169365.png" alt="">
+                <p id="kaf">Kafene</p>
+            </div>
+
+            <div id="lists">
+                <ul id="navlist">
+                    <a id="hover" href="http://127.0.0.1:5500/orders.html"><li>Orders</li></a>
+                    <a id="hover" href="http://127.0.0.1:5500/product.html"><li>Products</li></a>
+                    <a id="hover" href="http://127.0.0.1:5500/user.html"><li>Users</li></a>
+                </ul>
+            </div>
+        </nav>
+        <a href="http://127.0.0.1:5500/index.html"id="logout">Logout</a>
+    </div>
+
+    <div id="black">
+        <h1>Users</h1>
+    </div>
+
+    <div id="searchbox">
+        <input type="text" id="search" placeholder="Search by Name" onkeypress="searchname()">
+        <button id="reset" onclick="resetvalue()">Reset</button>
+    </div>
+
+    <table id="ul">
+        <thead id="head">
+          <tr>
+            <th>ID</th>
+            <th>User Avatar</th>
+            <th>Full Name</th>
+            <th>DoB</th>
+            <th>Gender</th>
+            <th>Current Location</th>
+          </tr>
+        </thead>
+    <table id="user"></table>
+    <script src="user.js"></script>
+</body>
+</html>
